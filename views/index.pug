@@ -1,5 +1,27 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	.inicial
+		h1.oi Tabela de produtos Lojas addasadsa
+
+		a.waves-effect.waves-light.btn(href='#modal1') button
+			#modal1.modal
+				.modal-content
+					h4 Modal Header
+					p A bunch of text
+				.modal-footer
+					a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#!') Agree
+
+
+		table.produtos.striped
+			thead
+				tr
+					th Produto
+					th Nome
+					th Categoria
+					th Estoque
+					th Material
+					th Tamanho
+					th Cor
+					th Preço
+			tbody#tabela
