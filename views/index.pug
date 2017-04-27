@@ -4,7 +4,9 @@ block content
 	.inicial
 		h1.oi Tabela de produtos Lojas Taqi
 
-		a.waves-effect.waves-light.btn(href='#modal1') button
+		a.waves-effect.waves-light.btn(href='#modal1') 
+			i.material-icons add_shopping_cart
+
 		#modal1.modal
 			.modal-content
 				h4 Adicionar produto
@@ -48,11 +50,11 @@ block content
 							.input-field.col.s6
 								i.material-icons.prefix attach_money
 								input#icon_prefix.validate(type='text')
-								label(for='icon_prefix') First Name
+								label(for='icon_prefix') Valor
 							.input-field.col.s6
-								i.material-icons.prefix phone
+								i.material-icons.prefix info
 								input#icon_telephone.validate(type='tel')
-								label(for='icon_telephone') Telephone
+								label(for='icon_telephone') Estoque
 
 
 			.modal-footer
