@@ -2,18 +2,65 @@ extends layout
 
 block content
 	.inicial
-		h1.oi Tabela de produtos Lojas addasadsa
+		h1.oi Tabela de produtos Lojas Taqi
 
 		a.waves-effect.waves-light.btn(href='#modal1') button
-			#modal1.modal
-				.modal-content
-					h4 Modal Header
-					p A bunch of text
-				.modal-footer
-					a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#!') Agree
+		#modal1.modal
+			.modal-content
+				h4 Adicionar produto
+				.row
+					form.col.s12
+						.row
+							.input-field.col.s6
+								select
+									option(value='', disabled='', selected='') Escolha a categoria
+									option(value='1' red)  Dormitório
+									option(value='2') Sala de Estar
+									option(value='3') Sala de Jantar
+									option(value='4') Cozinha
+									option(value='5') Escritório
+								label Materialize Select
+							.input-field.col.s6
+								input#last_name.validate(type='text')
+								label(for='first_name') First Name
+							ul#tabs-swipe-demo.tabs
+								li.tab.col.s3
+									a(href='#test-swipe-1') rrere
+								li.tab.col.s3
+									a.active(href='#test-swipe-2') Vermelho
+								li.tab.col.s3
+									a(href='#test-swipe-3') Verde
+							#test-swipe-1.col.s12.blue 
+								br
+								br
+								br
+							#test-swipe-2.col.s12.red 
+								br
+								br
+								br
+							#test-swipe-3.col.s12.green
+								br
+								br
+								br 
+				.row
+					form.col.s12
+						.row
+							.input-field.col.s6
+								i.material-icons.prefix attach_money
+								input#icon_prefix.validate(type='text')
+								label(for='icon_prefix') First Name
+							.input-field.col.s6
+								i.material-icons.prefix phone
+								input#icon_telephone.validate(type='tel')
+								label(for='icon_telephone') Telephone
 
 
-		table.produtos.striped
+			.modal-footer
+				a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#!') Cancelar
+				a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#!') Concluído
+
+
+		table.produtos.highlight.centered.bordered(border='1')
 			thead
 				tr
 					th Produto
@@ -24,4 +71,6 @@ block content
 					th Tamanho
 					th Cor
 					th Preço
+					th Editar
+					th Deletar
 			tbody#tabela
